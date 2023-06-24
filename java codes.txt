@@ -1,0 +1,715 @@
+/*
+//Exp6 -> WAP to implement static,local,instance variable.
+class Labb
+{
+    static int s = 420;//static variable
+    int ins = 47;//instance variable
+    void method()
+    {
+        int l = 17;//local variable
+	System.out.println("The local variable is: "+l);
+    }
+    public static void main(String args[])
+    {
+	Labb o = new Labb();
+	System.out.println("The static variable is: "+s);
+	o.method();
+	System.out.println("The instance variable is: "+o.ins);
+	
+    }
+}
+*/
+/*
+//Exp7 -> WAP to implement all datatypes and literals.
+class Labb
+{
+	public static void main(String[] args)
+	{
+		int i = 7;
+		float f = 10.0f;
+		double d = 17.69;
+		char c = 'C';
+		boolean b = true;
+		short s = 420;
+		long l = 6942080085L;
+		byte by = 47;
+		System.out.println("The value of literals with different datatypes are:");
+		System.out.println(i+"\n"+s+"\n"+l+"\n"+f+"\n"+d+"\n"+c+"\n"+b+"\n"+by);
+	}
+}
+*/
+/*
+//Exp8 -> WAP to add elements of two matrices.
+class Labb{
+   public static void main(String args[]){
+      int a[][]={{3,6},{4,8}};
+      int b[][]={{1,1},{2,1}};
+      int c[][]=new int[2][2];
+      System.out.println("The addition of 2 matrices is:");
+      for(int i = 0;i<2;i++){
+         for(int j = 0;j<2;j++){
+            c[i][j] = a[i][j]+b[i][j];
+            System.out.print(c[i][j]+" ");
+         }
+         System.out.println();
+      }
+   }
+}
+*/
+//Exp9 -> WAP to implement type conversion.
+class Labb {
+  public static void main(String[] args) {
+    double myD = 6.969;
+    int myI = (int) myD; // Manual casting: double to int
+
+    System.out.println("The value of double is: "+myD);
+    System.out.println("The value of int converted from double is: "+myI);
+
+    int i = 9;
+    double  d = i; // Automatic casting: int to double
+
+    System.out.println("Value of int is: "+i);
+    System.out.println("Value of double converted from int is: "+d);
+  }
+}
+
+/*
+//Q10 WAP to implement all operators
+class javaLabb{
+	public static void main(String args[]){
+		int num = 70;
+		int n = 6;
+
+		System.out.println("Performing unary operations:-");
+		System.out.println("Value of num before and after -- operator: "+ num +" & "+ --num);
+		System.out.println("Value after ++ operator is : "+ ++n);
+
+		System.out.println("Performing Arithematic operations:-");
+		System.out.println("Value of + operation is: "+ (num+n));
+		System.out.println("Value of - operation is: "+ (num-n));
+		System.out.println("Value of * operation is: "+ (num*n));
+		System.out.println("Value of % operation is: "+ (num%n));
+		System.out.println("Value of / operation is: "+ (num/n));
+		
+		System.out.println("Performing Logical operations:-");
+		System.out.println("Performing && operation: " + (num>n && 10<7));
+		System.out.println("Performing || operation: " + (num>n || 10<7));
+
+		System.out.println("Performing Bitwise operations:-");
+		System.out.println("Performing & operation: " + (num>n & 10>7));
+		System.out.println("Performing | operation: " + (num>n | 10<7));
+
+		System.out.println("Performing Relational operations:-");
+		System.out.println("Performing > and < operations: " + (num > n) + " and " + (num < n));
+		System.out.println("Performing >= and <= operations: " + (num >= n) + " and " + (num <= n));
+		System.out.println("Performing == and != operations: " + (num == n) + " and " + (num != n));
+
+	}
+}
+*/
+
+/*
+//Q11) WAP to implement switch case.
+
+class javaLabb{
+	public static void main(String args[]){
+	int value = 1;
+	switch(value){
+		case 1:
+		System.out.println("You have selected the value 1.");
+		break;
+		case 2:
+		System.out.println("You have selected the value 2.");
+		break;
+		default:
+		System.out.println("Enter a valid value");
+		break;
+	}
+	}
+}
+*/
+
+//Q12) WAP to implement inheritance.
+
+class Language{
+	void speak(){
+		System.out.println("I am the language of God");
+	}
+}
+class Russian extends Language{
+	void speak(){
+		System.out.println("I speak Russian.");
+	}
+}
+class Indian extends Language{
+	void speak(){
+		System.out.println("I speak Hindi.");
+	}
+}
+
+
+class javaLabb{
+	public static void main(String args[]){
+		Russian rus = new Russian();
+		rus.speak();
+
+		Indian ind = new Indian();
+		ind.speak();
+	}
+}
+/*
+//Exp13 WAP to implement access modifiers for data members.
+class Modifive{
+    public int x = 5;
+    protected int y =45;
+    int z = 6;
+    private int a = 78;
+    public void meth1(){
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
+        System.out.println(a);
+    }
+}
+public class JavaLabb {
+    public static void main(String[] args) {
+        Modifive m = new Modifive();
+        // m.meth1();
+        System.out.println(m.x);
+        System.out.println(m.y);
+        System.out.println(m.z);
+        System.out.println(m.a);
+    }
+}
+*/
+
+/*
+//Exp14 WAP to implement static , abstract and final keywords.
+
+abstract class Ab {
+	abstract void walk();
+}
+class speed extends Ab{
+	public static void shoutSomething() {
+        		System.out.println("Something");
+	}
+	void walk(){ //overriding the abstract method.
+		System.out.println("Walking speed is: 7 km/h");
+	}
+}
+public class JavaLabb{
+	public static void main(String args[]){
+		speed spd = new speed();
+		spd.shoutSomething();
+		spd.walk();
+		final int val = 69; //we cannot change the final variable's value once its declared.
+		System.out.println("Value of final variable is : "+val); 
+	}
+}
+*/
+
+//Exp15 WAP to implement run time polymorphism.
+class Bike{  
+  void run(){System.out.println("Running");}  
+}  
+class Splendor extends Bike{  
+  void run(){System.out.println("Running safely with 80kms");}
+}
+class JavaLabb{
+  public static void main(String args[]){  
+    Bike b = new Splendor();//upcasting  
+    b.run();  
+  } 
+}
+/*
+//Exp16 write a program to implement runtime polymorphism using abstract class
+abstract class cricket
+{
+	abstract void shots();
+	abstract void bowling();
+}
+class Players extends cricket
+{
+	void shots()
+	{
+		System.out.println("ABD can bat 360 degrees");
+	}
+	void bowling()
+	{
+		System.out.println("Bhuvi can swings the ball in both the directions");
+	}
+}
+public class JavaLabb
+{
+	public static void main(String args[])
+	{
+		Players p = new Players();
+		p.shots();
+		p.bowling();
+	}
+}
+*/
+
+/*
+//Exp17 Write a program to use this and super keywords
+class Batter
+{
+	int income = 150000;
+}
+class Yuzi extends Batter
+{
+	int income = 100000;
+	void display(){
+		System.out.println("The income of Batter is : "+super.income);
+		System.out.println("The income of Yuzi is : "+this.income);
+	}
+}
+public class JavaLabb
+{
+	public static void main(String args[]){
+		Yuzi p = new Yuzi();
+		p.display();
+	}
+}
+*/
+
+//Exp18 Write a program to create an interface and implement it
+interface Inn
+{
+	final int var = 10;
+	void display();
+}
+class Testclass implements Inn
+{
+	public void display(){
+		System.out.println("Hello Master, Greetings from Test class");
+	}
+}
+public class JavaLabb
+{
+	public static void main(String[] args){
+		Testclass tt = new Testclass();
+		tt.display();
+		System.out.println("The value of variable in interface is: "+tt.var);
+	}
+}
+
+/* 
+//Exp19 WAP to implement anonymous inner class 
+
+abstract class Cricket {
+    abstract void update();
+}
+
+class JavaLabb {
+    public static void main(String args[]) {
+        Cricket p = new Cricket() {
+            void update() {
+                System.out.println("WTC final is between India and Australia at Oval");
+            }
+        };
+        p.update();
+    }
+}
+*/
+
+/* 
+//Exp20 WAP to handle exception handling using try, catch & finally block
+class JavaLabb {
+    public static void main(String[] args) {
+        int x = 69, y = 0;
+        int result;
+      try {
+
+        result = x/y;
+      }
+  
+      catch (ArithmeticException e) {
+        System.out.println("ArithmeticException : " + e.getMessage());
+      }
+      
+      finally {
+        System.out.println("This is the finally block");
+      }
+    }
+}
+*/
+
+/* 
+//Exp21 WAP to demonstrate throw and throws keyword
+import java.io.IOException;
+public class JavaLabb {
+    void first() throws IOException {
+        throw new IOException("Error!");
+    }
+
+    void second() throws IOException {
+        first();
+    }
+
+    void third() {
+        try {
+            second();
+        } catch (Exception e) {
+            System.out.println("Work is done");
+        }
+    }
+
+    public static void main(String[] args) {
+        JavaLabb obj = new JavaLabb();
+        obj.third();
+        System.out.println("Situation under control");
+    }
+}
+*/
+
+//Exp22 WAP to perform basic string operations
+
+public class JavaLabb {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = "Master";
+        System.out.println("The String is: " + s1);
+
+        System.out.println("CharAt 2 of s2 is: " + s2.charAt(2));
+
+        int length = s1.length();
+        System.out.println("Length is: " + length);
+
+        String joinedString = s1.concat(s2);
+        System.out.println("Concatinated string: " + joinedString);
+
+        boolean comp = s1.equals(s2);
+        System.out.println("Comparision of two strings: " + comp);
+
+        System.out.println("The SubString os s1 is: " + s1.substring(1));
+
+        System.out.println("Using indent at s2:" + s2.indent(1));
+
+        StringBuilder s3 = new StringBuilder("New String");
+        System.out.println("Input: " + s3);
+        s3.append(true);
+        System.out.println("Output: " + s3);
+
+        System.out.println("Replacing 'o' with 'l' in s1: " +s1.replace('o', 'l'));
+
+        int count = 3;
+        System.out.println("Repeating s2: "+s2.repeat(count));
+
+    }
+}
+
+/Exp23 WAP to implement multithreading using thread class
+class MyThread extends Thread {
+    public void run() {
+        for (int i = 1; i <=3; i++) {
+            System.out.println("Thread: " + i);
+        }
+    }
+}
+
+public class Exp23 {
+    public static void main(String[] args) {
+        MyThread thread1 = new MyThread();
+        MyThread thread2 = new MyThread();
+        
+        thread1.start();
+        thread2.start();
+    }
+}
+/Exp24 WAP to implement multithreading using runnable interface.
+class MyRunnable implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 3; i++) {
+            System.out.println("Thread: " + i);
+        }
+    }
+}
+
+public class Exp24 {
+    public static void main(String[] args) {
+        MyRunnable myR = new MyRunnable();
+        Thread t1 = new Thread(myR);
+        Thread t2 = new Thread(myR);
+        
+        t1.start();
+        t2.start();
+    }
+}
+/Exp25 WAP to implement thread priority method naming methods , isAlive, sleep, yield,join.
+class MyThread extends Thread {
+    public MyThread(String name) {
+        super(name);
+    }
+
+    public void run() {
+        System.out.println("Thread " + getName() + " started.");
+        System.out.println("Thread " + getName() + " priority: " + getPriority());
+
+        for (int i = 1; i <= 3; i++) {
+            System.out.println("Thread " + getName() + ": " + i);
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            // Yield control to another thread
+            if (i == 3) {
+                System.out.println("Thread " + getName() + " yielding control.");
+                Thread.yield();
+            }
+        }
+
+        System.out.println("Thread " + getName() + " completed.");
+    }
+}
+
+public class Exp25 {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread("Thread 1");
+        MyThread t2 = new MyThread("Thread 2");
+
+        // Set thread priorities
+        t1.setPriority(Thread.MIN_PRIORITY);
+        t2.setPriority(Thread.MAX_PRIORITY);
+
+        // Start the threads
+        t1.start();
+        t2.start();
+
+        // Check if a thread is alive
+        System.out.println("Is Thread 1 alive? " + t1.isAlive());
+        System.out.println("Is Thread 2 alive? " + t2.isAlive());
+
+        // Join the threads
+        try {
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Is Thread 1 alive? " + t1.isAlive());
+        System.out.println("Is Thread 2 alive? " + t2.isAlive());
+
+        System.out.println("Main thread completed.");
+    }
+}
+/Exp26 WAP to implement synchronization using (i) Sync block (ii) Sync method.
+class Counter {
+    private int count = 0;
+
+    // Synchronized method
+    public synchronized void incrementSyncMethod() {
+        count++;
+        System.out.println("Sync Method - Incremented: " + count);
+    }
+
+    // Synchronized block
+    public void incrementSyncBlock() {
+        synchronized (this) {
+            count++;
+            System.out.println("Sync Block - Incremented: " + count);
+        }
+    }
+}
+
+class MyThread1 extends Thread {
+    private Counter counter;
+
+    public MyThread1(Counter counter) {
+        this.counter = counter;
+    }
+
+    public void run() {
+        for (int i = 0; i < 3; i++) {
+            counter.incrementSyncMethod();
+            counter.incrementSyncBlock();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+class MyThread2 extends Thread {
+    private Counter counter;
+
+    public MyThread2(Counter counter) {
+        this.counter = counter;
+    }
+
+    public void run() {
+        for (int i = 0; i < 3; i++) {
+            counter.incrementSyncMethod();
+            counter.incrementSyncBlock();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+public class Exp26 {
+    public static void main(String[] args) {
+        Counter counter = new Counter();
+
+        MyThread1 thread1 = new MyThread1(counter);
+        MyThread2 thread2 = new MyThread2(counter);
+
+        thread1.start();
+        thread2.start();
+    }
+}
+//Exp27 write a java program to implement wait() , notify() , notifyAll().
+class MyThread implements Runnable {
+    private final Object lock;
+
+    public MyThread(Object lock) {
+        this.lock = lock;
+    }
+
+    public void run() {
+        synchronized (lock) {
+            System.out.println(Thread.currentThread().getName() + " is waiting.");
+            try {
+                lock.wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(Thread.currentThread().getName() + " is resuming execution.");
+        }
+    }
+}
+
+public class Exp27 {
+    public static void main(String[] args) {
+        Object lock = new Object();
+
+        // Create three threads
+        Thread thread1 = new Thread(new MyThread(lock));
+        Thread thread2 = new Thread(new MyThread(lock));
+        Thread thread3 = new Thread(new MyThread(lock));
+
+        // Start the threads
+        thread1.start();
+        thread2.start();
+        thread3.start();
+
+        try {
+            Thread.sleep(2000); // Sleep for 2 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        synchronized (lock) {
+            System.out.println("Main thread is notifying one thread.");
+            lock.notify(); // Notify one waiting thread
+        }
+
+        try {
+            Thread.sleep(2000); // Sleep for 2 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        synchronized (lock) {
+            System.out.println("Main thread is notifying all threads.");
+            lock.notifyAll(); // Notify all waiting threads
+        }
+    }
+}
+//Exp28 WAP to create 3 buttons of different colors , such that on clicking on button color of background will change.
+
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+public class Exp28 implements ActionListener
+{
+	Frame F;
+	Button btnred,btnblue,btncyan;
+	public Exp28()
+	{
+		F = new Frame("Default Frame");
+		F.setLayout(new FlowLayout());
+		F.setSize(300,300);
+		F.setVisible(true);
+		
+		btnred = new Button("Red Frame");
+		btnred.addActionListener(this);
+		F.add(btnred);
+		
+		btnblue = new Button("Blue Frame");
+		btnblue.addActionListener(this);
+		F.add(btnblue);
+		
+		btncyan = new Button("Cyan Frame");
+		btncyan.addActionListener(this);
+		F.add(btncyan);
+		
+		F.add(btnred);
+		F.add(btnblue);
+		F.add(btncyan);
+	}
+	public static void main(String[] args)
+	{
+		Exp28 F= new Exp28();
+	}
+	public void actionPerformed(ActionEvent AE)
+	{
+		if(AE.getActionCommand()=="Red Frame")
+		{
+			F.setTitle("Red Frame");
+			F.setBackground(Color.RED);
+			F.setVisible(true);
+		}
+		if(AE.getActionCommand()=="Blue Frame")
+		{
+			F.setTitle("Blue Frame");
+			F.setBackground(Color.BLUE);
+			F.setVisible(true);
+		}
+		if(AE.getActionCommand()=="Cyan Frame")
+		{
+			F.setTitle("Cyan Frame");
+			F.setBackground(Color.CYAN);
+			F.setVisible(true);
+		}
+	}
+}
+EXP- 10B->write a program to count number of characteristics in a file
+
+import java.io.*;
+public class FileCharacterCountDemo {
+public static void main(String[]
+args) {
+String filename = "data.txt";
+String data = "This is a sample
+text.";
+try {
+FileWriter writer = new
+FileWriter(filename);
+writer.write(data);
+writer.close();
+FileReader reader = new
+FileReader(filename);
+int character;
+int count = 0;
+while ((character = reader.read())
+!= -1) {
+count++;
+}
+reader.close();
+System.out.println("Number of
+characters: " + count);
+} catch (IOException e) {
+e.printStackTrace();
+}
+}
+}
